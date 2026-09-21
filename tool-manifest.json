@@ -1,0 +1,67 @@
+{
+  "name": "loggly-api-mcp",
+  "version": "0.3.0",
+  "description": "Read-only MCP server for Loggly /apiv2 APIs.",
+  "tools": [
+    {
+      "name": "connection_test",
+      "title": "Connection Test",
+      "description": "Validates Loggly credentials by creating a small search and returning the RSID."
+    },
+    {
+      "name": "create_search",
+      "title": "Create Search",
+      "description": "Creates a Loggly search and returns its RSID metadata."
+    },
+    {
+      "name": "get_events",
+      "title": "Get Events",
+      "description": "Retrieves event results for a previously-created RSID from /apiv2/events."
+    },
+    {
+      "name": "search_and_get_events",
+      "title": "Search And Get Events",
+      "description": "Creates a search then fetches one page from legacy /apiv2/events using the returned RSID."
+    },
+    {
+      "name": "count_events",
+      "title": "Count Events",
+      "description": "Calls /apiv2/events/count to return event count and optional volume."
+    },
+    {
+      "name": "iterate_events_page",
+      "title": "Iterate Events Page",
+      "description": "Calls /apiv2/events/iterate with query parameters and returns the first page plus next URL."
+    },
+    {
+      "name": "iterate_events_next",
+      "title": "Iterate Events Next",
+      "description": "Fetches the next page from /apiv2/events/iterate using the exact next URL returned by the previous page."
+    },
+    {
+      "name": "volume_metrics",
+      "title": "Volume Metrics",
+      "description": "Calls /apiv2/volume-metrics to retrieve count/volume grouped or filtered by host/app/log type/tag."
+    },
+    {
+      "name": "stats_query",
+      "title": "Stats Query",
+      "description": "Calls /apiv2/stats/<stat_type>/<field> for numeric field statistics."
+    },
+    {
+      "name": "list_fields",
+      "title": "List Fields",
+      "description": "Calls /apiv2/fields/ to return parsed field names in the selected time range."
+    },
+    {
+      "name": "field_facets",
+      "title": "Field Facets",
+      "description": "Calls /apiv2/fields/<field>/ to return terms and counts for a specific field."
+    },
+    {
+      "name": "raw_api_call",
+      "title": "Raw API Call",
+      "description": "Makes a GET request to a Loggly API path. Useful while discovering exact endpoint behavior."
+    }
+  ]
+}

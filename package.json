@@ -1,0 +1,19 @@
+{
+  "name": "loggly-mcp",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "smoke": "node scripts/smoke-test.mjs",
+    "verify:manifest": "node scripts/verify-tool-manifest.mjs",
+    "test": "npm run verify:manifest && npm run smoke"
+  },
+  "engines": {
+    "node": ">=18.18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.25.2",
+    "zod": "^3.23.8"
+  }
+}
